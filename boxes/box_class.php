@@ -10,15 +10,18 @@ class box_class {
 	public $sub_boxes;
 	public $name;
 
-	public $location = 'center';
-	public $size = ['100%', '100%'];
-	public $clear = '';
-	public $padding = '';
-	public $text_align = '';
-	public $border = '5px solid green';
-	public $float = '';
-	public $align = '';
-	public $margin_left = '0px';
+	// public $location = 'center';
+	// public $size = ['100%', '100%'];
+	// public $clear = '';
+	// public $padding = '';
+	// public $text_align = '';
+	// public $border = '5px solid green';
+	// public $float = '';
+	// public $align = '';
+	// public $margin_left = '0px';
+
+	private $style;
+	private $action;
 	// public $float = 'left';
 	public $view = './box_view.php';
 
@@ -43,6 +46,21 @@ class box_class {
 		return $this->serial_id;
 	}
 
+	final public function add_style($style) {
+		$this->style = $style;
+	}
+
+	public function get_style() {
+		return $this->style;
+	}
+
+	public function add_action($action) {
+		$this->action = $action;
+	}
+
+	public function get_action() {
+		return $this->action;
+	}
 
 }
 
